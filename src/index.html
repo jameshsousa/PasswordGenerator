@@ -5,25 +5,71 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="assets/css/style.css">
   
   <title>Frontend Mentor | Password generator app</title>
 </head>
 <body>
 
-  Password Generator
+  <div class="container">
 
-  P4$5W0rD!
+    <div class="header">
+      <p>Password Generator</p>
+    </div>
 
-  Character Length
+    <div class="password">
+      <p>P4$5W0rD!</p>
+      <img src="assets/images/icon-copy.svg">
+    </div>
 
-  Include Uppercase Letters
-  Include Lowercase Letters
-  Include Numbers
-  Include Symbols
+    
+      
+    <main>
 
-  Strength
+      <div class="character">
+        <form>
+          <label>Character Length</label>
+          <input type="range">
+        </form>
+      </div>
 
-  Generate
+      <div class="types">
+        <form>
+        <label>Include Uppercase Letters</label>
+        <input type="checkbox">
+        </form>
+        <form>
+        <label>Include Lowercase Letters</label>
+        <input type="checkbox">
+        </form>
+        <form>
+        <label>Include Numbers</label>
+        <input type="checkbox">
+        </form>
+        <form>
+        <label>Include Symbols</label>      
+        <input type="checkbox">
+        </form>
+      </div>
+
+      <div class="strength">
+        <p>Strength</p>
+      </div>
+
+      <div class="generate">
+        <p>Generate</p>
+        <img src="assets/images/icon-arrow-right.svg">        
+      </div>
+
+            
+    </main>
+
+    <img src="assets/images/icon-check.svg">
+
+  </div>
+
+
 
 </body>
+
 </html>
