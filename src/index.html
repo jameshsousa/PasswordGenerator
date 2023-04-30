@@ -16,20 +16,20 @@
 
   <div class="container">
 
-    <div class="header">
-      <div class="header-password">
-        <p>Password Generator</p>
+
+      <div class="header">
+        <div class="header-password">
+          <p>Password Generator</p>
+        </div>
       </div>
-    </div>
 
 
-    <div class="container-password">
-      <div class="password">
-        <p>P4$5W0rD!</p>
-        <img src="assets/images/icon-copy.svg">
+      <div class="container-password">
+        <div class="password">
+          <p>P4$5W0rD!</p>
+          <img src="assets/images/icon-copy.svg">
+        </div>
       </div>
-    </div>
-
     
       
     <main class="main">
@@ -52,19 +52,19 @@
 
       <div class="types">
         <form>
-        <input type="checkbox">
+        <input onclick="myFunction()" id="uppercase" name="uppercase" type="checkbox">
         <label>Include Uppercase Letters</label>       
         </form>
         <form>
-        <input type="checkbox">
+        <input onclick="myFunction()" id="lowercase" name ="lowercase" type="checkbox">
         <label>Include Lowercase Letters</label>
         </form>
         <form>
-        <input type="checkbox">
+        <input onclick="myFunction()" id="numbers" name="numbers" type="checkbox">
         <label>Include Numbers</label>
         </form>
         <form>
-        <input type="checkbox">
+        <input onclick="myFunction()" id="symbols" name="symbols" type="checkbox">
         <label>Include Symbols</label>
         </form>
       </div>
@@ -78,8 +78,7 @@
         <p>Generate</p>
         <img src="assets/images/icon-arrow-right.svg">        
       </div>            
-    </main>
-    <img src="assets/images/icon-check.svg">
+    </main>    
   </div>
   <script src="script.js"></script>
 </body>
