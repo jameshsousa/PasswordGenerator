@@ -4,8 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">  
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100&family=Montserrat:wght@100&family=Space+Mono&display=swap" rel="stylesheet">
   
   <title>Frontend Mentor | Password generator app</title>
 </head>
@@ -14,26 +17,38 @@
   <div class="container">
 
     <div class="header">
-      <p>Password Generator</p>
+      <div class="header-password">
+        <p>Password Generator</p>
+      </div>
     </div>
 
-    <div class="password">
-      <p>P4$5W0rD!</p>
-      <img src="assets/images/icon-copy.svg">
+
+    <div class="container-password">
+      <div class="password">
+        <p>P4$5W0rD!</p>
+        <img src="assets/images/icon-copy.svg">
+      </div>
     </div>
 
     
       
     <main class="main">
 
-      <div class="character">
-        <div character-length>                
-          <label>Character Length</label>
-          <span>50</span> 
+      <div class="container-character">
+
+        <div class="character">
+
+          <div class="character-length">                
+            <label>Character Length</label>
+            <span class="range">50</span> 
+          </div>
+
+          <div class="character-input">
+            <input type="range" value='50' max='100'>       
+          </div>
         </div>
-          <input type="range" value='50' max='100'>
-       
       </div>
+
 
       <div class="types">
         <form>
@@ -56,6 +71,7 @@
 
       <div class="strength">
         <p>Strength</p>
+        <span>Medium</span>
       </div>
 
       <div class="generate">
