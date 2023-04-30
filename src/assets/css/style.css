@@ -11,7 +11,7 @@ body {
 
 .container {
     display: flex;
-    width: 40vw;
+    width: 30vw;
     height: 60vh;
     background-color: cornflowerblue;
     flex-direction: column;
@@ -55,15 +55,20 @@ body {
     width: 90%;
     height: 30%;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     background: brown;
+}
+
+.character-length {
+    display: flex;    
+    justify-self: space-between;
 }
 
 .types {
     display: flex;
     flex-direction: column;
     width: 90%;
-    height: 30%;
+    height: 40%;
     justify-content: center;
     align-items: start;
     background: plum;
