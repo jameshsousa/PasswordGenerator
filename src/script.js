@@ -40,10 +40,29 @@ const upper = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','
 const number = [0,1,2,3,4,5,6,7,8,9];
 const symbol = ['!', '@', '#', '$', '%', '&', '§', '?'];
 
+
+
 const u = Math.ceil(Math.random() * upper.length);
 const l = Math.ceil(Math.random() * lower.length);
 const n = Math.ceil(Math.random() * number.length);
 const s = Math.ceil(Math.random() * symbol.length);
+
+const btn = document.getElementById("btn");
+
+var lista = [];
+btn.addEventListener("click", () => {
+  if(lowercase.checked){
+    for(var i = 0; i < 10; i++){
+      lista.pop()
+    }
+
+  }
+})
+
+
+
+
+
 
 
 
