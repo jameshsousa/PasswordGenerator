@@ -69,6 +69,29 @@ btn.addEventListener("click", () => {
     }
     pass.innerHTML = password;
   }
+  else if(uppercase.checked){
+    for(var i = 0; i < 15; i++){
+      const u = Math.floor(Math.random() * upper.length);
+      password += upper[u];
+    }
+    pass.innerHTML = password;
+  }
+
+  else if(symbols.checked){
+    for(var i = 0; i < 15; i++){
+      const s = Math.floor(Math.random() * symbol.length);
+      password += symbol[s];
+    }
+    pass.innerHTML = password;
+  }
+
+  else if(numbers.checked){
+    for(var i = 0; i < 15; i++){
+      const n = Math.floor(Math.random() * number.length);
+      password += number[n];
+    }
+    pass.innerHTML = password;
+  }
 })
 
 
