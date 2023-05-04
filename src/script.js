@@ -1,13 +1,12 @@
-var $range = document.querySelector('input'),
-    $value = document.querySelector('span');
 
+const myRange = document.getElementById("range");
+var length = 12;
 
-
-$range.addEventListener('input', function() {
-  $value.textContent = this.value;  
-});
-
-
+document.getElementById("myRange").addEventListener('input', () => {
+  var x = document.getElementById("myRange").value;  
+  myRange.innerHTML = x; 
+  length = x; 
+})
 
 
 const uppercase = document.getElementById("uppercase");
@@ -22,6 +21,9 @@ var checkbox = document.querySelector("input[name=checkbox]");
 function myFunction() {
   if (uppercase.checked == true && lowercase.checked == true && numbers.checked == true && symbols.checked == true ){
     strength.innerHTML = "strong";
+  }
+  else if (uppercase.checked == false && lowercase.checked == false && numbers.checked == false && symbols.checked == false ){
+    strength.innerHTML = "";
   }
   else if   (uppercase.checked == true && lowercase.checked == true && numbers.checked == true || uppercase.checked == true && lowercase.checked == true && symbols.checked == true ){
     strength.innerHTML = "medium"; 
@@ -45,13 +47,15 @@ function myFunction() {
     
 }
 
+
+
+
 const lower = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','y','z'];
 const upper = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','Y','Z'];
 const number = [0,1,2,3,4,5,6,7,8,9];
 const symbol = ['!', '@', '#', '$', '%', '&', '§', '?'];
 
 const list = [lower, upper, number, symbol];
-
 
 
 const u = Math.floor(Math.random() * upper.length);
@@ -66,14 +70,14 @@ const btn = document.getElementById("btn");
 btn.addEventListener("click", () => {
   var password = "";
   if(lowercase.checked == true && uppercase.checked == false && symbols.checked == false && numbers.checked == false ){
-    for(var i = 0; i < 15; i++){
+    for(var i = 0; i < parseInt(length); i++){
       const l = Math.floor(Math.random() * lower.length);
       password += lower[l];
     }
     pass.innerHTML = password;
   }
   else if(uppercase.checked == true && lowercase.checked == false && symbols.checked == false && numbers.checked == false ){
-    for(var i = 0; i < 15; i++){
+    for(var i = 0; i < parseInt(length); i++){
       const u = Math.floor(Math.random() * upper.length);
       password += upper[u];
     }
@@ -81,7 +85,7 @@ btn.addEventListener("click", () => {
   }
 
   else if(symbols.checked == true && uppercase.checked == false && lowercase.checked == false && numbers.checked == false){
-    for(var i = 0; i < 15; i++){
+    for(var i = 0; i < parseInt(length); i++){
       const s = Math.floor(Math.random() * symbol.length);
       password += symbol[s];
     }
@@ -89,7 +93,7 @@ btn.addEventListener("click", () => {
   }
 
   else if(numbers.checked == true && symbols.checked == false && uppercase.checked == false && lowercase.checked == false){
-    for(var i = 0; i < 15; i++){
+    for(var i = 0; i < parseInt(length); i++){
       const n = Math.floor(Math.random() * number.length);
       password += number[n];
     }
@@ -97,7 +101,7 @@ btn.addEventListener("click", () => {
   }
 
   else if(numbers.checked == true && symbols.checked == true && uppercase.checked == true && lowercase.checked == true){
-    for(var i = 0; i < 4; i++){
+    for(var i = 0; i < parseInt(length); i++){
       if (i == 0){
       const n = Math.floor(Math.random() * number.length);
       password += number[n];      
@@ -134,13 +138,30 @@ btn.addEventListener("click", () => {
           const n = Math.floor(Math.random() * number.length);
           password += number[n];
         }
-
-      }              
-      
+      }  
     }
     pass.innerHTML = password;
   }
+})
 
+
+
+
+
+
+
+
+
+
+var copy = document.getElementById('copy');
+
+copy.addEventListener("click", () =>{
+  var copyText = document.getElementById("password");
+
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); 
+  
+  navigator.clipboard.writeText(copyText.value);
 
 })
 

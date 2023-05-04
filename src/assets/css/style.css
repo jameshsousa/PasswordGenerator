@@ -100,17 +100,17 @@ body {
     display: flex;
     width: 100%;
     justify-content: space-between;
-    align-items: center;  
-
+    align-items: center;
 }
+
 
 .character-input {
     display: flex;
-    width: 100%;
+    width: 100%;    
 }
 
 input[type=range] {
-    width: 100%;
+    width: 100%;    
 
 }
 

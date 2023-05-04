@@ -12,6 +12,8 @@
   
   <title>Frontend Mentor | Password generator app</title>
 </head>
+
+
 <body>
 
   <div class="container">
@@ -27,7 +29,7 @@
       <div class="container-password">
         <div class="password">
           <p id="password"></p>
-          <img src="assets/images/icon-copy.svg">
+         <buttom id="copy"><img src="assets/images/icon-copy.svg"></buttom> 
         </div>
       </div>
     
@@ -40,11 +42,11 @@
 
           <div class="character-length">                
             <label>Character Length</label>
-            <span class="range">15</span> 
+            <span id="range" class="range">12</span> 
           </div>
 
           <div class="character-input">
-            <input id="range" type="range" value='value' min='4' max='20'>       
+            <input id="myRange" type="range" value='value' min='4' max='20'>       
           </div>
         </div>
       </div>
