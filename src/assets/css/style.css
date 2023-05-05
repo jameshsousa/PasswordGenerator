@@ -9,12 +9,11 @@ body {
 
 }
 
-
 .container {
     display: flex;
     width: 30vw;
     height: 80vh;
-    background-color: #24232C;
+    background-color: #18171F;
     flex-direction: column;
     justify-content: center;
     align-items: center;        
@@ -26,7 +25,8 @@ body {
     height: 10%;
     justify-content: center;
     align-items: center;    
-    background-color: #18171F;    
+    background-color: #18171F;
+    margin-bottom: 1%;    
 }
 
 .header-password {
@@ -45,8 +45,10 @@ body {
     display: flex;
     width: 100%;
     height: 10%;
+    background-color: #24232C;
     justify-content: center;
     align-items: center;
+    margin-bottom: 4%;
 }
 
 .password {
@@ -146,7 +148,7 @@ input[type=range] {
     display: flex;
     width: 90%;
     height: 10%;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     background-color: #18171F;
     color: #817D92;
@@ -155,13 +157,22 @@ input[type=range] {
     text-transform: uppercase;
 }
 
+.strength p  {
+    margin-left: 7%;
+}
+
+#strength {
+    margin-right: 7%;
+    font-size: 24px;
+}
+
+
 .generate {
     display: flex;
     width: 90%;
     height: 10%;
     justify-content: center;
     align-items: center;
- /*   background: #A4FFAF;*/
     font-weight: bold;
     font-family: 'JetBrains Mono', monospace;
     text-transform: uppercase;
@@ -189,6 +200,47 @@ input[type=range] {
     cursor: grab;
     border: solid 0.2rem #A4FFAF;    
 }
+
+@import url(tiny.css) (min-width:300px);
+
+
+@media screen and (max-width: 343px) {
+    .header-password {
+        font-size: 16px;          
+    }
+    .password {
+        font-size: 24px;
+    }
+    .character {
+        font-size: 16px;
+    }
+    .range {
+        font-size: 24px;
+    }
+    .types {
+        font-size: 16px; 
+    }
+    #strength {        
+        font-size: 18px;
+    }
+    .generate {
+        font-size: 16px;
+    }
+    .generate button {
+        font-size: 16px;
+    }
+    body {
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        background-color: #FFFFFF;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;  
+    
+    }    
+    
+   }
 
 
 

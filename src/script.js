@@ -21,31 +21,36 @@ var checkbox = document.querySelector("input[name=checkbox]");
 function myFunction() {
   if (uppercase.checked == true && lowercase.checked == true && numbers.checked == true && symbols.checked == true ){
     strength.innerHTML = "strong";
+    strength.style.color= "#A4FFAF";
   }
-  else if (uppercase.checked == false && lowercase.checked == false && numbers.checked == false && symbols.checked == false ){
-    strength.innerHTML = "";
-  }
+
   else if   (uppercase.checked == true && lowercase.checked == true && numbers.checked == true || uppercase.checked == true && lowercase.checked == true && symbols.checked == true || numbers.checked == true && symbols.checked == true && lowercase.checked == true || numbers.checked == true && symbols.checked == true && uppercase.checked == true ){
     strength.innerHTML = "medium"; 
+    strength.style.color= "#F8CD65";
   }
 
   else if(uppercase.checked == true && lowercase.checked == true || symbols.checked == true && numbers.checked == true || lowercase.checked == true && numbers.checked == true || uppercase.checked == true && numbers.checked == true || lowercase.checked == true && numbers.checked == true || uppercase.checked == true && symbols.checked == true || lowercase.checked == true && symbols.checked == true ){
     strength.innerHTML = "weak";
+    strength.style.color= "#FB7C58";
   }
 
   else if  (uppercase.checked == true){
     strength.innerHTML = "too weak!";
+    strength.style.color="#F64A4A";
   }
   
   else if  (lowercase.checked == true){
     strength.innerHTML = "too weak!";
+    strength.style.color="#F64A4A";
   } 
 
   else if  (numbers.checked == true){
     strength.innerHTML = "too weak!";
+    strength.style.color="#F64A4A";
   } 
   else if  (symbols.checked == true){
     strength.innerHTML = "too weak!";
+    strength.style.color="#F64A4A";
   } 
 
   else if  (uppercase.checked == false && lowercase.checked == false && numbers.checked == false && symbols.checked == false ){
