@@ -112,6 +112,177 @@ btn.addEventListener("click", () => {
     copy = password;
   }
 
+  else if(numbers.checked == true && symbols.checked == true && uppercase.checked == false && lowercase.checked == false){
+    for(var i = 0; i < parseInt(length); i++){
+      if(i % 2 == 0){
+      const n = Math.floor(Math.random() * number.length);
+      password += number[n];
+      }
+      else {
+      const s = Math.floor(Math.random() * symbol.length);
+      password += symbol[s];
+      }
+    }
+    pass.innerHTML = password;
+    copy = password;
+  }
+
+  else if(numbers.checked == false && symbols.checked == false && uppercase.checked == true && lowercase.checked == true){
+    for(var i = 0; i < parseInt(length); i++){
+      if(i % 2 == 0){
+      const u = Math.floor(Math.random() * upper.length);
+      password += upper[u];
+      }
+      else {
+      const l = Math.floor(Math.random() * lower.length);
+      password += lower[l];
+      }
+    }
+    pass.innerHTML = password;
+    copy = password;
+  }
+
+  else if(numbers.checked == false && symbols.checked == true && uppercase.checked == true && lowercase.checked == false){
+    for(var i = 0; i < parseInt(length); i++){
+      if(i % 2 == 0){
+      const s = Math.floor(Math.random() * symbol.length);
+      password += symbol[s];
+      }
+      else {
+      const u = Math.floor(Math.random() * upper.length);
+      password += upper[u];
+      }
+    }
+    pass.innerHTML = password;
+    copy = password;
+  }
+
+  else if(numbers.checked == true && symbols.checked == false && uppercase.checked == false && lowercase.checked == true){
+    for(var i = 0; i < parseInt(length); i++){
+      if(i % 2 == 0){
+      const n = Math.floor(Math.random() * number.length);
+      password += number[n];
+      }
+      else {
+      const l = Math.floor(Math.random() * lower.length);
+      password += lower[l];
+      }
+    }
+    pass.innerHTML = password;
+    copy = password;
+  }
+
+  else if(numbers.checked == true && symbols.checked == false && uppercase.checked == true && lowercase.checked == false){
+    for(var i = 0; i < parseInt(length); i++){
+      if(i % 2 == 0){
+      const n = Math.floor(Math.random() * number.length);
+      password += number[n];
+      }
+      else {
+      const u = Math.floor(Math.random() * upper.length);
+      password += upper[u];
+      }
+    }
+    pass.innerHTML = password;
+    copy = password;
+  }
+
+
+  else if(numbers.checked == false && symbols.checked == true && uppercase.checked == false && lowercase.checked == true){
+    for(var i = 0; i < parseInt(length); i++){
+      if(i % 2 == 0){
+      const s = Math.floor(Math.random() * symbol.length);
+      password += symbol[s];
+      }
+      else {
+      const l = Math.floor(Math.random() * lower.length);
+      password += lower[l];
+      }
+    }
+    pass.innerHTML = password;
+    copy = password;
+  }
+
+
+  else if(numbers.checked == true && symbols.checked == true && uppercase.checked == true && lowercase.checked == false){
+    for(var i = 0; i < parseInt(length); i++){
+      if(i % 2 == 0){
+      const n = Math.floor(Math.random() * number.length);
+      password += number[n];
+      }
+      else if (i % 3 == 0) {
+      const s = Math.floor(Math.random() * symbol.length);
+      password += symbol[s];
+      }
+      else {
+      const u = Math.floor(Math.random() * upper.length);
+      password += upper[u];
+      }
+    }
+    pass.innerHTML = password;
+    copy = password;
+  }
+
+  else if(numbers.checked == true && symbols.checked == true && uppercase.checked == false && lowercase.checked == true){
+    for(var i = 0; i < parseInt(length); i++){
+      if(i % 2 == 0){
+      const n = Math.floor(Math.random() * number.length);
+      password += number[n];
+      }
+      else if (i % 3 == 0) {
+      const s = Math.floor(Math.random() * symbol.length);
+      password += symbol[s];
+      }
+      else {
+      const l = Math.floor(Math.random() * lower.length);
+      password += lower[l];
+      }
+    }
+    pass.innerHTML = password;
+    copy = password;
+  }
+
+  else if(numbers.checked == true && symbols.checked == false && uppercase.checked == true && lowercase.checked == true){
+    for(var i = 0; i < parseInt(length); i++){
+      if(i % 2 == 0){
+      const n = Math.floor(Math.random() * number.length);
+      password += number[n];
+      }
+      else if (i % 3 == 0) {
+      const u = Math.floor(Math.random() * upper.length);
+      password += upper[u];
+      }
+      else {
+      const l = Math.floor(Math.random() * lower.length);
+      password += lower[l];
+      }
+    }
+    pass.innerHTML = password;
+    copy = password;
+  }
+
+  else if(numbers.checked == false && symbols.checked == true && uppercase.checked == true && lowercase.checked == true){
+    for(var i = 0; i < parseInt(length); i++){
+      if(i % 2 == 0){
+      const s = Math.floor(Math.random() * symbol.length);
+      password += symbol[s];
+      }
+      else if (i % 3 == 0) {
+      const u = Math.floor(Math.random() * upper.length);
+      password += upper[u];
+      }
+      else {
+      const l = Math.floor(Math.random() * lower.length);
+      password += lower[l];
+      }
+    }
+    pass.innerHTML = password;
+    copy = password;
+  }
+
+
+
+
   else if(numbers.checked == true && symbols.checked == true && uppercase.checked == true && lowercase.checked == true){
     for(var i = 0; i < parseInt(length); i++){
       if (i == 0){
