@@ -62,6 +62,12 @@ body {
     font-family: 'JetBrains Mono', monospace;
 }
 
+.password img:hover {
+    opacity: 0.1;    
+    cursor: grab;
+}
+
+
 .main {
     display: flex;
     width: 100%;

@@ -25,11 +25,11 @@ function myFunction() {
   else if (uppercase.checked == false && lowercase.checked == false && numbers.checked == false && symbols.checked == false ){
     strength.innerHTML = "";
   }
-  else if   (uppercase.checked == true && lowercase.checked == true && numbers.checked == true || uppercase.checked == true && lowercase.checked == true && symbols.checked == true ){
+  else if   (uppercase.checked == true && lowercase.checked == true && numbers.checked == true || uppercase.checked == true && lowercase.checked == true && symbols.checked == true || numbers.checked == true && symbols.checked == true && lowercase.checked == true || numbers.checked == true && symbols.checked == true && uppercase.checked == true ){
     strength.innerHTML = "medium"; 
   }
 
-  else if(uppercase.checked == true && lowercase.checked == true){
+  else if(uppercase.checked == true && lowercase.checked == true || symbols.checked == true && numbers.checked == true || lowercase.checked == true && numbers.checked == true || uppercase.checked == true && numbers.checked == true || lowercase.checked == true && numbers.checked == true || uppercase.checked == true && symbols.checked == true || lowercase.checked == true && symbols.checked == true ){
     strength.innerHTML = "weak";
   }
 
@@ -38,6 +38,13 @@ function myFunction() {
   }
   
   else if  (lowercase.checked == true){
+    strength.innerHTML = "too weak!";
+  } 
+
+  else if  (numbers.checked == true){
+    strength.innerHTML = "too weak!";
+  } 
+  else if  (symbols.checked == true){
     strength.innerHTML = "too weak!";
   } 
 
@@ -65,6 +72,7 @@ const s = Math.floor(Math.random() * symbol.length);
 const k = Math.floor(Math.random() * list.length);
 
 const btn = document.getElementById("btn");
+var copy;
 
 
 btn.addEventListener("click", () => {
@@ -75,6 +83,7 @@ btn.addEventListener("click", () => {
       password += lower[l];
     }
     pass.innerHTML = password;
+    copy = password;
   }
   else if(uppercase.checked == true && lowercase.checked == false && symbols.checked == false && numbers.checked == false ){
     for(var i = 0; i < parseInt(length); i++){
@@ -82,6 +91,7 @@ btn.addEventListener("click", () => {
       password += upper[u];
     }
     pass.innerHTML = password;
+    copy = password;
   }
 
   else if(symbols.checked == true && uppercase.checked == false && lowercase.checked == false && numbers.checked == false){
@@ -90,6 +100,7 @@ btn.addEventListener("click", () => {
       password += symbol[s];
     }
     pass.innerHTML = password;
+    copy = password;
   }
 
   else if(numbers.checked == true && symbols.checked == false && uppercase.checked == false && lowercase.checked == false){
@@ -98,6 +109,7 @@ btn.addEventListener("click", () => {
       password += number[n];
     }
     pass.innerHTML = password;
+    copy = password;
   }
 
   else if(numbers.checked == true && symbols.checked == true && uppercase.checked == true && lowercase.checked == true){
@@ -141,29 +153,17 @@ btn.addEventListener("click", () => {
       }  
     }
     pass.innerHTML = password;
+    copy = password;
   }
 })
 
 
 
-
-
-
-
-
-
-
-var copy = document.getElementById('copy');
-
-copy.addEventListener("click", () =>{
-  var copyText = document.getElementById("password");
-
-  copyText.select();
-  copyText.setSelectionRange(0, 99999); 
+function copyText() {
   
-  navigator.clipboard.writeText(copyText.value);
+  navigator.clipboard.writeText(copy);
 
-})
+};
 
 
 
