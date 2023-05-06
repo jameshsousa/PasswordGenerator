@@ -201,46 +201,52 @@ input[type=range] {
     border: solid 0.2rem #A4FFAF;    
 }
 
-@import url(tiny.css) (min-width:300px);
+/* Para telas com largura menor ou igual a 343px */
 
+@media (max-width: 450px) {
 
-@media screen and (max-width: 343px) {
-    .header-password {
-        font-size: 16px;          
-    }
-    .password {
-        font-size: 24px;
-    }
-    .character {
-        font-size: 16px;
-    }
-    .range {
-        font-size: 24px;
-    }
-    .types {
-        font-size: 16px; 
-    }
-    #strength {        
-        font-size: 18px;
-    }
-    .generate {
-        font-size: 16px;
-    }
-    .generate button {
-        font-size: 16px;
-    }
     body {
-        display: flex;
-        width: 100vw;
-        height: 100vh;
-        background-color: #FFFFFF;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;  
-    
-    }    
-    
-   }
-
-
-
+      width: 100%;
+      height: 100%;
+    }
+  
+    .container {
+      width: 90%;
+      height: auto;
+    }
+  
+    .header-password {
+      font-size: 20px;
+    }
+  
+    .password {
+      font-size: 26px;
+    }
+  
+    .character {
+      font-size: 16px;
+    }
+  
+    .range {
+      font-size: 26px;
+    }
+  
+    .types {
+      font-size: 16px;
+    }
+  
+    #strength {
+      font-size: 20px;
+    }
+  
+    .generate {
+      font-size: 16px;
+    }
+  
+    .generate button {
+      font-size: 16px;
+    }
+  
+  }
+  
+  
